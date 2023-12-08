@@ -7,9 +7,8 @@ import { io } from 'socket.io-client';
 
 interface MessageData {
   _id: string;
-  name: string;
   comment: string;
-  timestamp: string; // Assuming the timestamp is a string
+  timestamp: string;
 }
 
 interface MessagesResponse {
@@ -25,7 +24,7 @@ const MessageBoard: React.FC = () => {
 
   const getCurrentTimestamp = (): string => {
     const now = new Date();
-    return now.toLocaleString(); // You can customize the format as needed
+    return now.toLocaleString();
   };
 
   const fetchData = async () => {
