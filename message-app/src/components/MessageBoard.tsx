@@ -1,5 +1,5 @@
 // src/components/MessageBoard.tsx
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import Message from './Message';
 import { TextField, Button, Container, Grid, Typography } from '@mui/material';
 import axios, { AxiosResponse } from 'axios';

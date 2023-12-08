@@ -20,15 +20,15 @@ This is a simple Message Board application that allows users to post messages an
 5. run the frontend application 'npm start'
 
 
-# Client (React): 
+## Client (React): 
 The front-end is built using React. It includes a MessageBoard component that allows users to post messages, and the messages are displayed in real-time.
 
-# Server (Express): 
+## Server (Express): 
 The server is built using Express. It handles the API endpoints for fetching and adding messages to the MongoDB database. Socket.IO is used to emit real-time updates to connected clients.
 
 # Database (MongoDB): 
 MongoDB is used to store messages. The messages collection in the boards database is queried for fetching messages and adding new ones.
 
-# API Endpoints
+## API Endpoints
 GET /messages: Retrieve all messages from the message board.
 POST /newMessage: Add a new message to the message board.

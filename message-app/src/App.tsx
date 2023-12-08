@@ -1,6 +1,5 @@
 import "./App.css";
-import { Box, createTheme, ThemeProvider, Container } from "@mui/material";
-import { useState } from "react";
+import { Box, createTheme, ThemeProvider } from "@mui/material";
 import MessageBoard from "./components/MessageBoard";
 
 const theme = createTheme({
