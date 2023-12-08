@@ -1,21 +1,20 @@
 // src/components/MessageBoard.tsx
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import Message from './Message';
 import { TextField, Button, Container, Grid, Typography } from '@mui/material';
-
-interface ChatMessage {
-  text: string;
-  timestamp: string;
-}
+import { MongoClient, ObjectId } from 'mongodb';
+import axios from 'axios';
+import { ChatMessage } from './ChatMessage';
 
 const MessageBoard: React.FC = () => {
   const [messages, setMessages] = useState<ChatMessage[]>([]);
   const [newMessage, setNewMessage] = useState<string>('');
   const [errorMessage, setErrorMessage] = useState<string>('');
 
+  
   const getCurrentTimestamp = (): string => {
     const now = new Date();
-    return now.toLocaleString(); // Customize the timestamp format as needed
+    return now.toLocaleString();
   };
 
   const handleAddMessage = () => {
@@ -27,7 +26,7 @@ const MessageBoard: React.FC = () => {
       setErrorMessage('Message cannot exceed 128 characters.');
     } else {
       const timestamp = getCurrentTimestamp();
-      const newChatMessage: ChatMessage = { text: trimmedMessage, timestamp };
+      const newChatMessage: ChatMessage = {text: trimmedMessage, timestamp };
       setMessages([newChatMessage, ...messages]);
       setNewMessage('');
       setErrorMessage('');
