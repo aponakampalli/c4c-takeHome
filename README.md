@@ -17,7 +17,7 @@ This is a simple Message Board application that allows users to post messages an
 2. run 'npm install' to install all dependencies
 3. navigate to directory 'cd message-app' 
 4. run the backend server 'node server.js'
-5. run the frontend application 'npm start'
+5. open new terminal, navigate to 'cd message-app' and run the frontend application 'npm start'
 
 
 ## Client (React): 
